@@ -18,16 +18,13 @@ all:
     k8s_master:
       hosts:
         master_1:
-          ansible_host: 10.0.0.10 
-    k8s_worker:
+          ansible_host: 10.0.0.1
+    k8s_workers:
       hosts:
         worker_1:
-          ansible_host: 10.0.0.11 
-
-  vars:
-    ansible_ssh_user: sa_ansible
-    ansible_ssh_private_key_file: vault/ansiblekey.yml
-
+          ansible_host: 10.0.0.1
+        worker_2:
+          ansible_host: 10.0.0.2
 ```
 
 

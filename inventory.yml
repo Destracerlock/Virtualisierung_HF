@@ -1,0 +1,13 @@
+all:
+  children:
+    k8s_master:
+      hosts:
+        master_1:
+          ansible_host: 10.0.0.1
+    k8s_workers:
+      hosts:
+        worker_1:
+          ansible_host: 10.0.0.1
+        worker_2:
+          ansible_host: 10.0.0.2
+
