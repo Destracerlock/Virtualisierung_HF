@@ -38,7 +38,6 @@ all:
     git clone https://github.com/Destracerlock/Virtualisierung_HF.git
     ```
 2. Decrypt or create the ansible key
-    Decrypt:
     ```bash
     ansible-vault decrypt vault/key/ansible_ssh_key
     ```
