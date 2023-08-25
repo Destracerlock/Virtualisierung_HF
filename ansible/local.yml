@@ -1,0 +1,5 @@
+---
+- name: Configure Nodes
+  hosts: all  
+  roles:
+    - base

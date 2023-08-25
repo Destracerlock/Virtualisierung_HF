@@ -1,0 +1,3 @@
+token = "cbb550dcaeea2c3661a85ddf4736dac1c4f018319fae5928e405f010a00385d4"
+authorized_keys = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPQkWmFegEllJienPL3nrE8B04krUCGUvWLorCmXGtrP joku@SASNOTE2384"
+root_pass ="LINODEaLmA9cloud"

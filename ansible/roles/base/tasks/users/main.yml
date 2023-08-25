@@ -1,0 +1,17 @@
+---
+- name: Disable root SSH access
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRootLogin'
+    line: 'PermitRootLogin no'
+  notify: restart sshd
+- name: Grant passwordless sudo access to wheel group
+  lineinfile:
+    path: /etc/sudoers
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+- name: Include joku.yml
+  include_tasks: tasks/joku.yml
+- name: Include fahr.yml
+  include_tasks: tasks/fahr.yml
+- name: Include sa_ansible.yml
+  include_tasks: tasks/sa_ansible.yml

@@ -41,7 +41,7 @@ all:
     Create:
     ```bash 
     [[ -f vault/key/ansible_ssh_key ]] && rm -rf vault/key/ansible_ssh_key*
-    ssh-keygen -t ed25519 -f vault/ansible_ssh_key -N ""
+    ssh-keygen -t ed25519 -f vault/key/ansible_ssh_key -N ""
     ```
 
 3. Configure ansible inventory

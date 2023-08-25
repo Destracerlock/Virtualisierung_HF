@@ -1,0 +1,9 @@
+resource "linode_instance" "terraform-test" {
+        image = "linode/almalinux9"
+        label = "Terraform-Example"
+        group = "Terraform"
+        region = var.region
+        type = "g6-nanode-1"
+        swap_size = 1024
+        authorized_keys = [var.authorized_keys]
+}

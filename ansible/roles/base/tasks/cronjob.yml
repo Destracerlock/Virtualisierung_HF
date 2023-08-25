@@ -1,0 +1,14 @@
+- name: Copy run.sh to target host
+  copy:
+    src: ../../../files/bootstrap/run.sh
+    dest: /etc/ansible_pull_run.sh
+
+- name: Schedule ansible-pull cron job
+  cron:
+    name: "ansible-pull"
+    minute: "*/10"
+    job: "/etc/ansible_pull_run.sh"
+
+- name: Display message
+  debug:
+    msg: "Cron job for ansible-pull scheduled"
